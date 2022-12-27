@@ -435,4 +435,32 @@
 // var d=new Date(1232,21,3,3,2,11,1);
 // console.log(d.toString());
 
-console.log("hello");
+// console.log("hello");
+
+//######################################## Maths function
+
+// console.log(Math.PI); //pi value
+
+// console.log(Math.round(10.3124));
+// console.log(Math.round(10.8));
+// console.log(Math.pow(10,8));
+// console.log(Math.sqrt(36));
+
+// console.log(Math.abs(-02));
+// console.log(Math.abs(-82));
+
+// ` console.log(Math.ceil(4.4));// num+1 if number after decimal is greater than 1
+//  console.log(Math.floor(4.4));//will return the same number`
+
+//  console.log(Math.min(4.4,33,3.003));
+//  console.log(Math.max(4.4,33,3.003));
+
+
+// console.log(Math.random());
+// console.log(Math.random()*10);// it will give random number between 1 to 10 in decimal form
+// console.log(Math.round(Math.random()*10));//it will give random number between 1 to 10
+
+// console.log(Math.trunc(45.4));
+// console.log(Math.trunc(-45.4)); // will return the integer part
+
+
