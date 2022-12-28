@@ -464,3 +464,62 @@
 // console.log(Math.trunc(-45.4)); // will return the integer part
 
 
+
+//setInterval function=>it executes after certain intervals
+
+// function timeset(){
+// setInterval(()=>{
+//    var d= new Date().toLocaleTimeString();
+//    console.log("time",d);
+// },1000)
+// }
+
+// timeset();
+
+//setTimeout function => it only executes once after given time 
+
+// function timeset(){3e
+// setTimeout(()=>{
+//    var d= new Date().toLocaleTimeString();
+//    console.log("time",d);
+// },1000)
+// return "hello";
+// }
+
+// timeset();
+
+
+
+
+
+////object oriented programming
+
+// let boiData={
+//     myname:"riitk",
+//     myhead:"jamre",
+//     getData(){
+//         console.log(`my name is ${boiData.myname} and head is ${boiData.myhead}`);
+//     }
+// }
+
+// console.log(boiData);
+// console.log(boiData.myname);
+// console.log(boiData.myhead);
+// boiData.getData();
+
+
+//object inside other object
+// let data={
+//     myName:{
+// realName:"riitk",
+// headName:"jamre",
+//     },
+//     age:23,
+// }
+
+// console.log(data.myName.headName);
+
+
+//this object=>contain the current context
+
+
