@@ -1,31 +1,26 @@
 <html>
-    <head>
+  <head> </head>
+  <body>
+    <div class="main-div">
+      <div>
+        <p>want to know the name?</p>
+        <p id="showName"></p>
+        <br />
+        <button id="btn">click here</button>
+      </div>
+    </div>
+    <script>
+      const showName = document.querySelector("#showName");
+      const btn = document.querySelector("#btn");
 
-    </head>
-    <body>
-        <div class="main-div">
-            <div>
-                <p>
-                    want to know the name?
-                </p>
-                <p id="showName"></p>
-                <br>
-                <button id="btn"> click here</button>
-            </div>
-         
-        </div>
-        <script>
-            const showName=document.querySelector('#showName');
-            const btn=document.querySelector('#btn');
+      const showMyName = () => {
+        showName.innerHTML = "Loading...";
+        setTimeout(() => {
+          showName.innerHTML = "ritik Jamre";
+        }, 1000);
+      };
 
-            const showMyName=()=>{
-                showName.innerHTML="Loading...";
-                setTimeout(()=>{
-                    showName.innerHTML="ritik Jamre";
-                },1000)
-            }
-
-            btn.addEventListener('click',showMyName);
-        </script>
-    </body>
+      btn.addEventListener("click", showMyName);
+    </script>
+  </body>
 </html>

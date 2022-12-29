@@ -1,37 +1,32 @@
 <html>
-    <head>
+  <head> </head>
+  <body>
+    <div class="main-div">
+      <div>
+        <p>stop til 5..</p>
+        <br />
+        <button id="btn">Start</button>
+        <button id="btnStop">Stop</button>
+      </div>
+    </div>
+    <script>
+      const showNum = document.querySelector("p");
+      const btn = document.querySelector("#btn");
+      const btnStop1 = document.querySelector("#btnStop");
+      let num = 0;
+      let refInterval;
+      const showMyNum = () => {
+        showNum.innerHTML = "Loading...";
+        refInterval = setInterval(() => {
+          showNum.innerHTML = `${num}`;
+          num++;
+        }, 1000);
+      };
 
-    </head>
-    <body>
-        <div class="main-div">
-            <div>
-                <p>
-                    stop til 5..
-                </p>
-                <br>
-                <button id="btn"> Start</button>
-                <button id="btnStop"> Stop</button>
-            </div>
-         
-        </div>
-        <script>
-            const showNum=document.querySelector('p');
-            const btn=document.querySelector('#btn');
-            const btnStop1=document.querySelector('#btnStop');
-            let num=0;
-            let refInterval;
-        const showMyNum=()=>{
-                showNum.innerHTML="Loading...";
-                refInterval= setInterval(()=>{
-                    showNum.innerHTML=`${num}`;
-                    num++;
-                },1000)
-            }
-
-            btn.addEventListener('click',showMyNum);
-            btnStop1.addEventListener('click',()=>{
-                clearInterval(refInterval);
-            });
-        </script>
-    </body>
+      btn.addEventListener("click", showMyNum);
+      btnStop1.addEventListener("click", () => {
+        clearInterval(refInterval);
+      });
+    </script>
+  </body>
 </html>
