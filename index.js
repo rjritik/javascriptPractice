@@ -511,9 +511,7 @@
 
 //this object does not work with fat arrow function
 
-
 //destructuring
-
 
 // array destructure
 // let myData=["ritik","btech",38];
@@ -525,7 +523,6 @@
 // for (item of myData){
 //     console.log(item);//but here the actual array will be shown
 // }
-
 
 //object desructuring
 
@@ -560,7 +557,6 @@
 // const newcolor=["black",...color];
 // console.log(newcolor);
 
-
 // const object={myname:"ritik",myhead:"jamre"};
 // const object1={...object};
 // console.log(object1);
@@ -578,20 +574,18 @@
 // console.log(message.padStart(5)); // it will make string length to 5
 // console.log(message.padEnd(15));//it will make length of string upto 15
 
-
 //object methods
 
 //object.values() and object.entries() and object.keys() and object.fromentries
 
 // const object={myname:"ritik",myhead:"jamre"};
 // console.log(Object.values(object));//it will show the array of value
-// console.log(Object.keys(object));//it will give the array of keys 
-// console.log(Object.entries(object));//it will convert the object into array of key value 
+// console.log(Object.keys(object));//it will give the array of keys
+// console.log(Object.entries(object));//it will convert the object into array of key value
 
 //object.fromEntries  again convert the array into object form
 //  let obj1=Object.entries(object);
 //  console.log(Object.fromEntries(obj1));
-
 
 //flat method for array to convert the 2d array into single array after flat method we don't need to use the reduce method
 // let arr1=[
@@ -601,4 +595,76 @@
 // ];
 // console.log(arr1.flat(Infinity)); //Infinity for flating the array to the last level
 
+//hoisting => we have a creation phase and a execution phase .Hoisting in javascript is a mechanism where variables and fucntion declaration are moved to the top of the scope before the code execution.
+//  console.log(myName);
+//  var myName;
+//  myName="ritik"
 
+//it will show error messgae if we use let keyword
+//  console.log(myName);
+//  let myName;
+//  myName="ritik"
+
+// ## function currying = currying is the evaluating the function with multiple arguments into sequence of function with single argument
+
+// function sum(num1){
+//     return function (num2)
+//     {
+//         return function(num3){
+// console.log(num1+num2+num3);
+//         }
+//     }
+// }
+// sum(2)(4)(41);
+
+//example of promises in javascript
+
+// var promise =new Promise ((resolve,reject)=>{
+//     const x="yes";
+//     const y="No";
+//     if(x==y){
+//         resolve("successfully");
+//     }
+//     else {
+//         reject("error");
+//     }
+// })
+
+// promise.then((success)=>{
+//     console.log("success"+success);
+// }).catch((error)=>{
+// console.log("Error"+ error);
+// })
+
+//promise.all()=> The Promise.all() static method takes an iterable of promises as input and returns a single Promise.
+
+const promiseOne = new Promise((resolve, reject) => {
+  resolve("Promise 1 Success");
+});
+
+const promiseTwo = new Promise((resolve, reject) => {
+  resolve("Promise 2 Success");
+});
+const promiseThree = new Promise((resolve, reject) => {
+  resolve("Promise 3 Success");
+});
+
+//promise.all = it takes all the promise as an argument and wait for all the promise to complete and then shows the result 
+// Promise.all([
+//     promiseOne,
+//     promiseTwo,
+//     promiseThree
+// ]).then((messages)=>{
+// console.log(messages); // [ 'Promise 1 Success', 'Promise 2 Success', 'Promise 3 Success' ]
+// })
+
+
+// promise.race= it gives the result as soon as first promise get the result 
+
+Promise.race([
+    promiseOne,
+    promiseTwo,
+    promiseThree
+]).then((messages)=>{
+console.log(messages); //Promise 1 Success
+})
