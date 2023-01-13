@@ -638,16 +638,16 @@
 
 //promise.all()=> The Promise.all() static method takes an iterable of promises as input and returns a single Promise.
 
-const promiseOne = new Promise((resolve, reject) => {
-  resolve("Promise 1 Success");
-});
+// const promiseOne = new Promise((resolve, reject) => {
+//   resolve("Promise 1 Success");
+// });
 
-const promiseTwo = new Promise((resolve, reject) => {
-  resolve("Promise 2 Success");
-});
-const promiseThree = new Promise((resolve, reject) => {
-  resolve("Promise 3 Success");
-});
+// const promiseTwo = new Promise((resolve, reject) => {
+//   resolve("Promise 2 Success");
+// });
+// const promiseThree = new Promise((resolve, reject) => {
+//   resolve("Promise 3 Success");
+// });
 
 //promise.all = it takes all the promise as an argument and wait for all the promise to complete and then shows the result 
 // Promise.all([
@@ -661,10 +661,10 @@ const promiseThree = new Promise((resolve, reject) => {
 
 // promise.race= it gives the result as soon as first promise get the result 
 
-Promise.race([
-    promiseOne,
-    promiseTwo,
-    promiseThree
-]).then((messages)=>{
-console.log(messages); //Promise 1 Success
-})
+// Promise.race([
+//     promiseOne,
+//     promiseTwo,
+//     promiseThree
+// ]).then((messages)=>{
+// console.log(messages); //Promise 1 Success
+// })
